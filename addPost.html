@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a new post on PostIt">
+  <title>Create a Post | PostIt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html" aria-label="PostIt home">PostIt</a>
+
+      <div class="nav-actions">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="profile-icon" href="login.html" aria-label="Open login page">&#128100;</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="add-post-main">
+    <section class="page-intro" aria-labelledby="page-title">
+      <p class="eyebrow">Share something new</p>
+      <h1 id="page-title">Create a post</h1>
+      <p>Put an idea, question, or moment into the world.</p>
+    </section>
+
+    <form class="add-post-form" action="index.html" method="get">
+
+      <div class="form-row">
+        <label for="postBody">Post body</label>
+        <textarea id="postBody" name="postBody" rows="7" placeholder="What would you like to share?" required></textarea>
+        <p class="field-hint">Keep it kind, clear, and useful.</p>
+      </div>
+
+      <div class="form-row">
+        <label for="postImage">Add an image <span>(optional)</span></label>
+        <input type="file" id="postImage" name="postImage" accept="image/*">
+      </div>
+
+      <div class="form-actions">
+        <a class="button button-secondary" href="index.html">Cancel</a>
+        <button class="button button-primary" type="submit">Publish post</button>
+      </div>
+
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>PostIt &middot; Share what matters.</p>
+  </footer>
+
+</body>
+
+</html>
