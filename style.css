@@ -264,3 +264,97 @@ h2 ~ p {
     width: 100%;
   }
 }
+
+/* Main feed area */
+.feed {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Container holding all posts */
+.posts {
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Individual post card */
+.post {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Top part of each post */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  margin-bottom: 1rem;
+}
+
+/* User icon */
+.post-avatar {
+  font-size: 1.8rem;
+}
+
+/* Name + date */
+.post-header div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Username */
+.post-header strong {
+  font-size: 1rem;
+}
+
+/* Date */
+.post-header time {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Post text */
+.post p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Post image */
+.post-image {
+  width: 100%;
+  height: auto; 
+
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.like-checkbox {
+    display: none;
+}
+
+.like-button {
+    cursor: pointer;
+}
+
+.like-button::before {
+    content: "☆";
+    font-size: 24px;
+}
+
+.like-checkbox:checked + .like-button::before {
+    content: "★";
+}
+
+
+.like-button:hover {
+    background-color: #f3f4f6;
+}
