@@ -346,12 +346,14 @@ h2 ~ p {
 }
 
 .like-button::before {
-    content: "☆";
-    font-size: 24px;
+    content: "❤️";
+    font-size: 20px;
+    filter: grayscale(100%);
+    cursor: pointer;
 }
 
 .like-checkbox:checked + .like-button::before {
-    content: "★";
+    filter: grayscale(0%);
 }
 
 
