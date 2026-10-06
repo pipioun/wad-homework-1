@@ -17,7 +17,7 @@
 body {
   margin: 0;
   font-family: "Trebuchet MS", Arial, sans-serif;
-  background: linear-gradient(135deg, #f4f8f6 0%, var(--paper) 52%, #fff5ed 100%);
+  background: var(--paper);
   color: var(--ink);
   min-height: 100vh;
 }
@@ -108,7 +108,7 @@ body {
 h1 {
   margin: 0;
   font-family: Georgia, serif;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: 3.5rem;
   line-height: 1;
 }
 
@@ -121,7 +121,7 @@ h1 {
 .add-post-form {
   max-width: 720px;
   margin: 0;
-  padding: clamp(24px, 5vw, 44px);
+  padding: 32px;
   background-color: var(--surface);
   border: 1px solid rgba(220, 228, 232, 0.9);
   border-radius: 16px;
@@ -234,7 +234,7 @@ input[type="file"] {
 }
 
 .page-intro h1 ~ p {
-  color: var(--muted);
+  line-height: 1.5;
 }
 
 .site-footer {
