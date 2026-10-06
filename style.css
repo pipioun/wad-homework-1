@@ -360,3 +360,61 @@ h2 ~ p {
 .like-button:hover {
     background-color: #f3f4f6;
 }
+/* Login page */
+
+.login-main {
+  width: min(92%, 980px);
+  min-height: calc(100vh - 140px);
+  margin: 0 auto;
+  padding: 70px 0 88px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-main .page-intro {
+  text-align: center;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.login-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-main {
+    padding: 48px 0 64px;
+  }
+
+  .login-form {
+    padding: 24px;
+  }
+}
