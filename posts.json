@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "author": "Robert",
+    "createdAt": "2026-10-03",
+    "text": "Guys watch out, it's a phishing link!!",
+    "linkText": null,
+    "linkUrl": null,
+    "image": "res/image/angry-emoji.gif",
+    "imageAlt": "Angry emoji"
+  },
+  {
+    "id": 2,
+    "author": "Marcel Oliver Joachim Blau",
+    "createdAt": "2026-10-02",
+    "text": "Cats. Look at this cute cat video",
+    "linkText": "https://www.youtube.com/watch?v=y0sF5xhGreA",
+    "linkUrl": "https://consumer.ftc.gov/articles/how-recognize-avoid-phishing-scams",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": 3,
+    "author": "Alice",
+    "createdAt": "2026-10-02",
+    "text": "For me dogs",
+    "linkText": null,
+    "linkUrl": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": 4,
+    "author": "Maria",
+    "createdAt": "2026-10-02",
+    "text": "Should I rather buy a cat or a dog?",
+    "linkText": null,
+    "linkUrl": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": 5,
+    "author": "Maria",
+    "createdAt": "2026-10-01",
+    "text": "Walking next to Delta.",
+    "linkText": null,
+    "linkUrl": null,
+    "image": "res/image/IMG_1261.jpg",
+    "imageAlt": "River view in front of Delta"
+  },
+  {
+    "id": 6,
+    "author": "Robert",
+    "createdAt": "2026-09-30",
+    "text": "Finally finished my homework!",
+    "linkText": null,
+    "linkUrl": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": 7,
+    "author": "Alice",
+    "createdAt": "2026-09-29",
+    "text": "Does anyone want to study together tomorrow?",
+    "linkText": null,
+    "linkUrl": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": 8,
+    "author": "Maria",
+    "createdAt": "2026-09-28",
+    "text": "Another lovely walk by the river.",
+    "linkText": null,
+    "linkUrl": null,
+    "image": "res/image/IMG_1261.jpg",
+    "imageAlt": "River view in front of Delta"
+  },
+  {
+    "id": 9,
+    "author": "Marcel Oliver Joachim Blau",
+    "createdAt": "2026-09-27",
+    "text": "Any good movie recommendations for the weekend?",
+    "linkText": null,
+    "linkUrl": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": 10,
+    "author": "Robert",
+    "createdAt": "2026-09-26",
+    "text": "Reminder: always check where a link actually leads.",
+    "linkText": null,
+    "linkUrl": null,
+    "image": null,
+    "imageAlt": ""
+  }
+]
