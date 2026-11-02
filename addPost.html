@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Create a new post on PostIt">
   <title>Create a Post | PostIt</title>
+  <script src="js/profileDropdown.js" defer></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,7 +18,20 @@
 
       <div class="nav-actions">
         <a class="nav-link" href="index.html">Home</a>
-        <a class="profile-icon" href="login.html" aria-label="Open login page">&#128100;</a>
+        <div class="profile-container">
+
+          <button class="profile-icon" id="profileButton" type="button"
+                  aria-label="Open profile menu" aria-expanded="false">
+              &#128100;
+          </button>
+      
+          <div class="profile-dropdown" id="profileDropdown" hidden>
+              <p><strong>Username:</strong> Robert</p>
+              <p><strong>Email:</strong> robert@example.com</p>
+              <a href="login.html">Logout</a>
+          </div>
+      
+      </div>
       </div>
     </nav>
   </header>

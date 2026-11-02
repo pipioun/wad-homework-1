@@ -418,3 +418,53 @@ input[type="file"] {
     padding: 24px;
   }
 }
+/* Profile dropdown */
+
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  cursor: pointer;
+  border: none;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  min-width: 220px;
+  padding: 15px;
+  margin-top: 10px;
+
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  z-index: 10;
+}
+
+.profile-dropdown[hidden] {
+  display: none;
+}
+
+.profile-dropdown p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.profile-dropdown a:hover {
+  background-color: #ddd;
+}

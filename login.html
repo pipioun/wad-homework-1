@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - PostIt</title>
+    <script src="js/profileDropdown.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,7 +17,20 @@
             <div class="nav-actions">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="addPost.html" class="nav-link">Add Post</a>
-                <a href="login.html" class="profile-icon">👤</a>
+                <div class="profile-container">
+
+                    <button class="profile-icon" id="profileButton" type="button"
+                            aria-label="Open profile menu" aria-expanded="false">
+                        &#128100;
+                    </button>
+                
+                    <div class="profile-dropdown" id="profileDropdown" hidden>
+                        <p><strong>Username:</strong> Robert</p>
+                        <p><strong>Email:</strong> robert@example.com</p>
+                        <a href="login.html">Logout</a>
+                    </div>
+                
+                </div>
             </div>
         </nav>
     </header>
