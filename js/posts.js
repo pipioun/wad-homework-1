@@ -1,6 +1,7 @@
 const postsContainer = document.querySelector('.posts');
 
-fetch('https://raw.githubusercontent.com/pipioun/wad-homework-1/refs/heads/main/res/json/posts.json')
+//fetch('https://raw.githubusercontent.com/pipioun/wad-homework-1/refs/heads/main/res/json/posts.json')
+fetch('res/json/posts.json')
         .then((response) => response.json())
         .then(json => {
             console.log(json);
@@ -42,4 +43,12 @@ fetch('https://raw.githubusercontent.com/pipioun/wad-homework-1/refs/heads/main/
                 postArticle.append(postText);
 
                 postsContainer.appendChild(postArticle);
-                }});
+                }
+            })
+            .catch(err => {
+            const errDiv = document.createElement("div");
+
+            errDiv.className = 'post';
+            errDiv.innerText = err;
+            postsContainer.appendChild(errDiv);
+            });
