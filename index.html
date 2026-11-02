@@ -7,6 +7,7 @@
     <meta name="description" content="View posts shared on PostIt">
     <title>PostIt</title>
     <script type="text/javascript" src="js/posts.js" defer></script>
+    <script src="js/profileDropdown.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,17 +23,29 @@
                 <a class="nav-link" href="addPost.html">Add Post</a>
                 <a class="nav-link" href="index.html">Home</a>
 
-                <a class="profile-icon" href="login.html" aria-label="Open login page">
-                    &#128100;
-                </a>
+                <div class="profile-container">
+
+                    <button class="profile-icon" id="profileButton" type="button" aria-label="Open profile menu"
+                        aria-expanded="false">
+                        &#128100;
+                    </button>
+
+                    <div class="profile-dropdown" id="profileDropdown" hidden>
+                        <p><strong>Username:</strong> Robert</p>
+                        <p><strong>Email:</strong> robert@example.com</p>
+                        <a href="login.html">Logout</a>
+                    </div>
+
+                </div>
             </div>
+
         </nav>
     </header>
 
     <main class="feed">
         <section class="posts">
 
-           <!--  <article class="post">
+            <!--  <article class="post">
 
                 <header class="post-header">
                     <span class="post-avatar">&#128100;</span>

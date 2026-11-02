@@ -2,65 +2,76 @@ const postsContainer = document.querySelector('.posts');
 
 //fetch('https://raw.githubusercontent.com/pipioun/wad-homework-1/refs/heads/main/res/json/posts.json')
 fetch('res/json/posts.json')
-        .then((response) => response.json())
-        .then(json => {
-            console.log(json);
-            for(let singleJsonPost of json){
-                //Article for posts
-                const postArticle = document.createElement('article');
-                    postArticle.className = 'post';
+    .then((response) => response.json())
+    .then(json => {
+        console.log(json);
+        for (let singleJsonPost of json) {
+            //Article for posts
+            const postArticle = document.createElement('article');
+            postArticle.className = 'post';
 
-                //header
-                const postHeader = document.createElement('header');
-                    postHeader.className = 'post-header';
+            //header
+            const postHeader = document.createElement('header');
+            postHeader.className = 'post-header';
 
-                //header avatar
-                const headerAvatar = document.createElement('span');
-                    headerAvatar.className = 'post-avatar';
-                    headerAvatar.textContent = '\u{1F464}';
+            //header avatar
+            const headerAvatar = document.createElement('span');
+            headerAvatar.className = 'post-avatar';
+            headerAvatar.textContent = '\u{1F464}';
 
-                //container for author and date
-                const headerInfo = document.createElement('div')
-                //author
-                const headerAuthor = document.createElement('strong')
-                    headerAuthor.innerText = singleJsonPost.author;
-                //date
-                const headerDate = document.createElement('time')
-                    headerDate.innerText = singleJsonPost.createdAt;
+            //container for author and date
+            const headerInfo = document.createElement('div')
+            //author
+            const headerAuthor = document.createElement('strong')
+            headerAuthor.innerText = singleJsonPost.author;
+            //date
+            const headerDate = document.createElement('time')
+            headerDate.innerText = singleJsonPost.createdAt;
 
-                //text
-                const postText = document.createElement('p')
-                    postText.innerText = singleJsonPost.text;
+            //text
+            const postText = document.createElement('p')
+            postText.innerText = singleJsonPost.text;
 
-                //links if possible:
-                if (singleJsonPost.linkUrl){
+            //links if possible:
+            if (singleJsonPost.linkUrl) {
                 const link = document.createElement('a')
                 const linkText = document.createTextNode(singleJsonPost.linkText);
-                
+
                 link.appendChild(linkText);
                 link.href = singleJsonPost.linkUrl;
 
                 postText.append(": ")
                 postText.appendChild(link);
-                }
+            }
 
-                //build togther
-                headerInfo.append(headerAuthor);
-                headerInfo.append(headerDate);
+            //build togther
+            headerInfo.append(headerAuthor);
+            headerInfo.append(headerDate);
 
-                postHeader.append(headerAvatar);
-                postHeader.append(headerInfo);
+            postHeader.append(headerAvatar);
+            postHeader.append(headerInfo);
 
-                postArticle.append(postHeader);
-                postArticle.append(postText);
+            postArticle.append(postHeader);
+            postArticle.append(postText);
 
-                postsContainer.appendChild(postArticle);
-                }
-            })
-            .catch(err => {
-            const errDiv = document.createElement("div");
+            // Add an image if the post contains one
+            if (singleJsonPost.image) {
+                const postImage = document.createElement('img');
 
-            errDiv.className = 'post';
-            errDiv.innerText = err;
-            postsContainer.appendChild(errDiv);
-            });
+                postImage.className = 'post-image';
+                postImage.src = singleJsonPost.image;
+                postImage.alt = singleJsonPost.imageAlt;
+
+                postArticle.appendChild(postImage);
+            }
+
+            postsContainer.appendChild(postArticle);
+        }
+    })
+    .catch(err => {
+        const errDiv = document.createElement("div");
+
+        errDiv.className = 'post';
+        errDiv.innerText = err;
+        postsContainer.appendChild(errDiv);
+    });
